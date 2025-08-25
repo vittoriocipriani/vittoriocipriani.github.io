@@ -1,113 +1,237 @@
 <!DOCTYPE html>
-<html>
-<head><script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vittorio Cipriani</title>
 
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$']]
-      }
-    };
+  <!-- MathJax -->
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-</head>
+  <script>
+    MathJax = { tex: { inlineMath: [['$', '$']] } };
+  </script>
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Styling -->
   <style>
-    body { background-color: white;
-    overflow-x:hidden; }
-    
-  </style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
 
+    header {
+      background: #003366;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 2rem;
+    }
+
+    .profile img {
+      border-radius: 8px;
+      width: 150px;
+    }
+
+    .profile-info h2 {
+      margin: 0;
+    }
+
+    .section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .section h3 {
+      color: #003366;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
 
-    <img src="me.png" width= "200px" >
-      <div style = "position:relative; left:220px; top:-150px;">
-     <b><font size="4">  Vittorio Cipriani</font></b>
-     <!--  <p><b style="position:relative; top:-3px;">Institutional e-mail: </b><img src="1mail.jpg" width= "200px" > </p>-->
-     <p><b style="position:relative; top:-3px;">Personal e-mail: </b><img src="2mail.jpg" width= "200px" > </p>
-     <p><b>CV (last update 10/01/25) </b> <a href="CV.pdf"target="_blank">CV.pdf</a></p>    
+  <header>
+    <h1>Vittorio Cipriani</h1>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#papers">Papers</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#talks">Talks</a>
+      <a href="CV.pdf" target="_blank">CV</a>
+    </nav>
+  </header>
 
-   </div>
+  <div class="container">
+
+    <section class="profile">
+      <img src="me.png" alt="Vittorio Cipriani">
+      <div class="profile-info">
+        <p><b>Email:</b> <img src="2mail.jpg" width="150px"></p>
+       <p>Currently I am a research fellow at the <a href="https://www.tuwien.at/mg/dmg/" target="_blank">Institute of Discrete Mathematics and Geometry</a> of the <a href="https://www.tuwien.at/" target="_blank">Vienna University of Technology (TU Wien)</a>, where I am a project assistant for the project "Classifying structures via Learning" led by Prof. Ekaterina Fokina.
+
+                  
+                  
+      </p>
+
+        <p>I got my Ph.D. at the <a href="https://www.uniud.it/it" target="_blank">University of Udine</a> in May 2023 under the supervision of Prof. Alberto Marcone and Dr. Luca San Mauro with the thesis "Many problems, different frameworks: Classification of Problems in Computable Analysis and Algorithmic Learning Theory".
 
 
-<div style = "position:relative; top:-100px; max-width:100%; min-width:300px;">
-  <hr>
-<h4> Currently I am a research fellow at the <a href="https://www.tuwien.at/mg/dmg/" target="_blank"> Institute of Discrete Mathematics and Geometry </a> of the
-     <a href="https://www.tuwien.at/en/"target="_blank"> Vienna University of Technology (TU Wien)</a>, where 
-       I am a project assistant for the project "Classifying structures via Learning" led by Prof. Ekaterina Fokina.</h4>
+                  
+                  
+      </p>
 
-  <h4> I got my Ph.D. at the University of Udine in May 2023 under the supervision of Prof. Alberto Marcone and Dr. Luca San Mauro with the thesis "Many problems, different frameworks: Classification of Problems in Computable Analysis and Algorithmic Learning Theory".
-  </h4>
-       
-  <h3> <font color=blue>Research interests </font></h3>
-  Computable analysis (in particular, Weihrauch reducibility and its connections to reverse mathematics), algorithmic learning theory of algebraic structure, (effective) descriptive set theory. 
-  <h3> <font color=blue>List of papers </font></h3>
-<ul>
-  <li><i>Learning theory</i></li>
-  <ul><br>
-    <li><i>Calculating the Mind Change Complexity of Learning Algebraic Structures</i> (j.w.w. Nikolay Bazhenov, and Luca San Mauro) <br />  
-       Berger, U., Franklin, J.N.Y., Manea, F., Pauly, A. (eds) Revolutions and Revelations in Computability. CiE 2022. Lecture Notes in Computer Science, vol 13359. Springer, Cham. <a href="https://link.springer.com/chapter/10.1007/978-3-031-08740-0_1" target="_blank">10.1007/978-3-031-08740-0_1</a>;</li>
-  <br><li> <i>Learning algebraic structures with the help of Borel equivalence relations</i> (j.w.w. Nikolay Bazhenov, and Luca San Mauro)<br />
-     Theoretical Computer Science, 951:113762, 2023. <br />  <a href="https://arxiv.org/abs/2110.14512" target="_blank">arXiv link</a>  </li>
- <br><li><i>Classifying different criteria for learning algebraic structures</i> (j.w.w.  Nikolay Bazhenov, Sanjay Jain, Luca San Mauro and Frank Stephan),<br />  submitted<br />  
- <a href="https://arxiv.org/abs/2410.22933" target="_blank">arXiv link</a> 
- </li>
-  <br />  <li><i>On the learning power of Friedman-Stanley jumps</i> (j.w.w. Alberto Marcone and Luca San Mauro)<br />  submitted<br />
-   <a href="https://arxiv.org/html/2501.12846" target="_blank">arXiv link</a> 
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <h3>Research Interests</h3>
+      <p>Computable analysis (in particular, Weihrauch reducibility and its connections to reverse mathematics), 
+         algorithmic learning theory of algebraic structure, (effective) descriptive set theory.</p>
+    </section>
+
+    <section class="section" id="papers">
+      <h3>Publications</h3>
+     <ol>
+  <li>
+    Calculating the Mind Change Complexity of Learning Algebraic Structures 
+    (with Bazhenov and San Mauro). In: Berger, U., Franklin, J.N.Y., Manea, F., Pauly, A. (eds) 
+    <em>Revolutions and Revelations in Computability. CiE 2022. Lecture Notes in Computer Science</em>, 
+    vol 13359. Springer, Cham. 
+    <a href="https://doi.org/10.1007/978-3-031-08740-0_1">https://doi.org/10.1007/978-3-031-08740-0_1</a>;
   </li>
-    
- <br /><li> <i>On statistical learning of graphs</i> (j.w.w. Valentino Delle Rose, Luca San Mauro and Giovanni Soldà) <br /> submitted <br />
-    </li>
-  </ul>
- <br> <li><i>Computable analysis</i></li><br>
-  <ul><li><i>The Weihrauch lattice at the level of $\mathbf{\Pi}_1^1\text{-}\mathsf{CA}_0$: the Cantor-Bendixson theorem</i> (j.w.w. Alberto Marcone and Manlio Valenti) <br />
-     The Journal of Symbolic Logic, published online,2025:1-39 
-    <a href="https://www.cambridge.org/core/journals/journal-of-symbolic-logic/article/weihrauch-lattice-at-the-level-of-boldsymbol-pi-11mathsfca0-the-cantorbendixson-theorem/0C1DAE2F7230B6FF53737593393F6E90" target="_blank">doi:10.1017/jsl.2024.72</a> <br \>
-  <a href="https://arxiv.org/abs/2210.15556" target="_blank">arXiv link</a> </li>
-<br/>
-    <li> <i>Embeddability of graphs and Weihrauch degrees</i> (j.w.w. Arno Pauly) <br /> 
-      Journal of Mathematical Logic, published online
-        <a href="https://www.worldscientific.com/doi/10.1142/S0219061325500114" target="_blank">https://doi.org/10.1142/S0219061325500114</a> <br \>
-      <a href="https://arxiv.org/abs/2305.00935" target="_blank">arXiv link</a> 
-    </li>
-  <br />  <li>  <i>The complexity of finding supergraphs</i> (j.w.w. Arno Pauly) <br /> 
-       Della Vedova, G., Dundua, B., Lempp, S., Manea, F. (eds) Unity of Logic and Computation. CiE 2023. Lecture Notes in Computer Science, vol 13967. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-36978-0_15" target="_blank">10.1007/978-3-031-36978-0_15</a></li></ul>
 
-  </ul>
-<h3> <font color=blue>Teaching Experience </font></h3>
-(2021-2022) Teaching assistant for the course of Linear Algebra, Bachelor degree in Internet of Things, Big Data, Machine Learning, Uniud held by Prof. D'Agostino.
-<h3> <font color=blue>Talks </font></h3>
-  20 contributed talks, most of them given in several editions of Logic Colloquium, Computability in Europe, Computability and Complexity in Analysis and Continuity, Computability, Constructivity and Computability<ul>
-     <li>
-      (July 2024) Invited talk at UMI-AMS joint meeting (Palermo).
-    </li>
-    <li>
-      (July 2024) Invited talk at Computability and Complexity in Analysis (Swansea).
-    </li>
-    <li>
-      (March 2024) Invited talk at UW-Logic seminar (online).
-    </li>
-    <li>
-      (November 2021) Invited talk at Midwest computability seminars (online).
-    </li>
-  </ul>
-</div>
+  <li>
+    Learning algebraic structures with the help of Borel equivalence relations 
+    (with Bazhenov and San Mauro). <em>Theoretical Computer Science</em>, 2023.  
+    <a href="https://doi.org/10.1016/j.tcs.2023.113762">https://doi.org/10.1016/j.tcs.2023.113762</a>.  
+    Available at <a href="https://arxiv.org/abs/2110.14512">https://arxiv.org/abs/2110.14512</a>;
+  </li>
 
-<div style = "position:relative; top:-40px;">
+  <li>
+    The Weihrauch lattice at the level of <strong>Π<sup>1</sup><sub>1</sub>-CA<sub>0</sub></strong>: the Cantor-Bendixson theorem 
+    (with Marcone and Valenti). <em>The Journal of Symbolic Logic</em>, 2025.  
+    <a href="https://doi.org/10.1017/jsl.2024.72">doi:10.1017/jsl.2024.72</a>.  
+    Available at <a href="https://arxiv.org/abs/2210.15556">https://arxiv.org/abs/2210.15556</a>;
+  </li>
 
-  
-  
-  
-</div>
+  <li>
+    The complexity of finding supergraphs (with Pauly). In: Della Vedova, G., Dundua, B., Lempp, S., Manea, F. (eds) 
+    <em>Unity of Logic and Computation. CiE 2023. Lecture Notes in Computer Science</em>, vol 13967. Springer, Cham.  
+    <a href="https://doi.org/10.1007/978-3-031-36978-0_15">https://doi.org/10.1007/978-3-031-36978-0_15</a>.
+  </li>
 
-<div style = "position:relative; top:-40px;">
- 
-</div>
+  <li>
+    Embeddability of graphs and Weihrauch degrees (with Pauly). 
+    <em>Journal of Mathematical Logic</em>, 2025.  
+    <a href="https://doi.org/10.1016/j.tcs.2023.113762">https://doi.org/10.1016/j.tcs.2023.113762</a>.  
+    Available at <a href="https://arxiv.org/abs/2305.00935">https://arxiv.org/abs/2305.00935</a>;
+  </li>
 
-<div style = "position:relative; top:-40px;">
-  
-</div>
+  <li>
+    Classifying different criteria for learning algebraic structures 
+    (with Bazhenov, Jain, San Mauro and Stephan). 
+    <em>Annals of Pure and Applied Logic</em>, 2025.  
+    <a href="https://doi.org/10.1016/j.apal.2025.103648">https://doi.org/10.1016/j.apal.2025.103648</a>.  
+    Available at <a href="https://arxiv.org/abs/2410.22933">https://arxiv.org/abs/2410.22933</a>;
+  </li>
+
+  <li>
+    On the learning power of Friedman-Stanley jumps (with Marcone and San Mauro). 
+    <em>Submitted for publication</em>.  
+    Available at <a href="https://www.arxiv.org/pdf/2501.12846">https://www.arxiv.org/pdf/2501.12846</a>;
+  </li>
+
+  <li>
+    On statistical learning of graphs (with Delle Rose, San Mauro and Soldà). 
+    <em>Submitted for publication</em>.
+  </li>
+
+  <li>
+    Hyperarithmetic Aspects of Unfriendly Partitions of Recursive Graphs 
+    (with Belanger, Goh, Richter, Stephan, and Tang). 
+    <em>In preparation</em>.
+  </li>
+
+  <li>
+    Dichotomy results for classes of countable graphs 
+    (with Fokina, Harrison-Trainor, Ko and Rossegger). 
+    <em>In preparation</em>.
+  </li>
+</ol>
+
+    </section>
+
+    <section class="section" id="teaching">
+      <h3>Teaching Experience</h3>
+      <p>(2021–2022) Teaching assistant for the course of Linear Algebra, Bachelor degree in Internet of Things, Big Data, Machine Learning, Uniud, held by Prof. D'Agostino.</p>
+    </section>
+
+    <section class="section" id="talks">
+      <h3>Talks</h3>
+      <ul>
+        <li>(July 2024) Invited talk at UMI-AMS joint meeting (Palermo).</li>
+        <li>(July 2024) Invited talk at Computability and Complexity in Analysis (Swansea).</li>
+        <li>(March 2024) Invited talk at UW-Logic seminar (online).</li>
+        <li>(November 2021) Invited talk at Midwest computability seminars (online).</li>
+      </ul>
+    </section>
+
+  </div>
 
 </body>
 </html>
