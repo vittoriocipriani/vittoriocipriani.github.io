@@ -18,89 +18,141 @@
 
   <!-- Styling -->
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-    }
+   /* General improvements */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
 
-    header {
-      background: #003366;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
+header {
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
 
-    nav {
-      margin-top: 0.5rem;
-    }
+nav {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
 
-    nav a {
-      color: white;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+nav a:hover {
+  text-decoration: underline;
+}
 
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-    .profile {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 2rem;
-    }
+/* Profile layout */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
 
-    .profile img {
-      border-radius: 8px;
-      width: 150px;
-    }
+.profile img {
+  border-radius: 8px;
+  width: 150px;
+  flex-shrink: 0;
+}
 
-    .profile-info h2 {
-      margin: 0;
-    }
+.profile-info h2 {
+  margin: 0;
+}
 
-    .section {
-      background: white;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+/* Section styling */
+.section {
+  background: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
 
-    .section h3 {
-      color: #003366;
-      margin-top: 0;
-    }
+.section h3 {
+  color: #003366;
+  margin-top: 0;
+}
 
-    ul {
-      padding-left: 20px;
-    }
+ul, ol {
+  padding-left: 20px;
+}
 
-    a {
-      color: #0056b3;
-      text-decoration: none;
-    }
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+a:hover {
+  text-decoration: underline;
+}
+
+/* -------- RESPONSIVE ADJUSTMENTS -------- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav {
+    gap: 0.5rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile img {
+    width: 120px;
+  }
+
+  .profile-info p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -108,8 +160,8 @@
   <header>
     <h1>Vittorio Cipriani</h1>
     <nav>
-      <a href="#research">Research</a>
-      <a href="#papers">Papers</a>
+      <a href="#research">Research Interests</a>
+      <a href="#papers">Publications and preprints</a>
       <a href="#teaching">Teaching</a>
       <a href="#talks">Talks</a>
       <a href="CV.pdf" target="_blank">CV
@@ -227,7 +279,7 @@
     </section>
 
     <section class="section" id="teaching">
-      <h3>Teaching Experience</h3>
+      <h3>Teaching</h3>
       <p>(2021–2022) Teaching assistant for the course of Linear Algebra, Bachelor degree in Internet of Things, Big Data, Machine Learning, Uniud, held by Prof. D'Agostino.</p>
     </section>
 
